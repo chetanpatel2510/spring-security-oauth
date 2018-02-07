@@ -25,7 +25,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory().withClient("ClientId").secret("secret").authorizedGrantTypes("authorization_code")
-				.scopes("user_info").autoApprove(true);
+				.scopes("user_info").autoApprove(false);
 	}
 	
 	@Override
